@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,32 +7,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260421-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260526-1" />
   </head>
   <body>
-    <div class="bg-orb orb-1" aria-hidden="true"></div>
-    <div class="bg-orb orb-2" aria-hidden="true"></div>
-    <div class="bg-orb orb-3" aria-hidden="true"></div>
+    <div class="language-menu">
+      <button class="language-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="language-options">
+        <span>Language</span>
+        <span class="language-current">English</span>
+      </button>
+      <div class="language-options" id="language-options" role="menu" hidden>
+        <button class="language-option is-active" type="button" role="menuitemradio" aria-checked="true" data-language="en">English</button>
+        <button class="language-option" type="button" role="menuitemradio" aria-checked="false" data-language="zh">中文</button>
+      </div>
+    </div>
+
+    <nav class="page-nav" aria-label="Section navigation">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#education" data-i18n="nav.education">Education</a>
+      <a href="#publications" data-i18n="nav.publications">Publications</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#awards" data-i18n="nav.awards">Contest Awards</a>
+    </nav>
 
     <main class="wrapper">
       <section class="glass-card intro-section">
         <img class="avatar-photo" src="./RA_Photo.jpg" alt="Jiahao Chen Photo" />
         <div class="intro-container">
-          <h1 class="name">Jiahao Chen</h1>
-          <p class="title">Research Assistant, <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> · Computer Vision & Robotics</p>
+          <h1 class="name" data-i18n="hero.name">Jiahao Chen</h1>
+          <p class="title" data-i18n="hero.title">Research Assistant, <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> · Computer Vision & Robotics</p>
           <ul class="contact-list">
             <li><a href="mailto:polyjiahao.chen@connect.polyu.hk">polyjiahao.chen@connect.polyu.hk</a></li>
-            <li>Hong Kong</li>
+            <li><a href="https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=AIqSsVuMLD1o6odnJSZbPym4iI6u67L-TQrIR3b3BhZAQxq7ot5-mf5o6U8k6l1wszzfFePLzvhxivMa9TKKYH0ZBeQtaQD4ee1rTig53cvxfkeuNGwMfMxhQuKz5koB2jI&user=ydlQnLgAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+            <li data-i18n="hero.location">Hong Kong</li>
           </ul>
         </div>
       </section>
 
-      <section class="glass-card section profile-section">
-        <h2 class="section-title">About Me</h2>
-        <p>
+      <section id="about" class="glass-card section profile-section">
+        <h2 class="section-title" data-i18n="section.about">About Me</h2>
+        <p data-i18n="about.body">
           I am a Research Assistant in the <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> at The Hong Kong Polytechnic University.
           My supervisor is <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">Prof. Bo Yang</a>. My main research interests are Computer Vision and Robotics,
           with current work on unsupervised 3D instance segmentation and object-centric representation learning.
@@ -40,34 +56,45 @@
         </p>
       </section>
 
-      <section class="glass-card section educations-section">
-        <h2 class="section-title">Education</h2>
+      <section id="education" class="glass-card section educations-section">
+        <h2 class="section-title" data-i18n="section.education">Education</h2>
         <article class="row-item">
           <div class="upper-row">
-            <p class="left">The Hong Kong Polytechnic University</p>
+            <p class="left" data-i18n="education.polyu.school">The Hong Kong Polytechnic University</p>
             <p class="right">Sep 2024 - Jan 2026</p>
           </div>
-          <p class="sub">MSc in Information Technology · GPA 4.21 / 4.30 · IELTS 7.0</p>
+          <p class="sub" data-i18n="education.polyu.degree">MSc in Information Technology · GPA 4.21 / 4.30 · IELTS 7.0</p>
         </article>
         <article class="row-item">
           <div class="upper-row">
-            <p class="left">Fuzhou University</p>
+            <p class="left" data-i18n="education.fzu.school">Fuzhou University</p>
             <p class="right">Sep 2019 - Jun 2023</p>
           </div>
-          <p class="sub">Bachelor in Software Engineering · GPA 3.71 / 4.00</p>
+          <p class="sub" data-i18n="education.fzu.degree">Bachelor in Software Engineering · GPA 3.71 / 4.00</p>
         </article>
       </section>
 
-      <section class="glass-card section publications-section">
-        <h2 class="section-title">Publications</h2>
+      <section id="publications" class="glass-card section publications-section">
+        <h2 class="section-title" data-i18n="section.publications">Publications</h2>
 
         <article class="paper-card">
           <img class="teaser" src="./EvObj_video.gif" alt="EvObj visual teaser" />
           <div>
             <h3 class="paper-title"><a href="https://arxiv.org/html/2605.13152v1" target="_blank" rel="noopener noreferrer">EvObj: Learning Evolving Object-centric Representations for 3D Instance Segmentation without Scene Supervision</a></h3>
-            <p class="authors"><strong>Jiahao Chen</strong>, Zihui Zhang, Yafei Yang, Jinxi Li, Shenxing Wei, Zhixuan Sun, Bo Yang</p>
-            <p class="venue"><em>CVPR 2026 (Accepted)</em>, First Author</p>
-            <p class="links"><a href="https://github.com/vLAR-group/EvObj" target="_blank" rel="noopener noreferrer">[Code]</a></p>
+            <p class="authors" data-i18n="authors.evobj"><strong>Jiahao Chen</strong>, Zihui Zhang, Yafei Yang, Jinxi Li, Shenxing Wei, Zhixuan Sun, Bo Yang</p>
+            <p class="venue"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</em></p>
+            <p class="venue" data-i18n="publication.firstAuthor">First Author</p>
+            <p class="links"><a href="https://github.com/vLAR-group/EvObj" target="_blank" rel="noopener noreferrer">[Code]</a> <a href="https://www.youtube.com/watch?v=zpWWP86lzCU" target="_blank" rel="noopener noreferrer">[YouTube]</a></p>
+          </div>
+        </article>
+
+        <article class="paper-card">
+          <img class="teaser" src="./foundobj.jpg" alt="FoundObj paper teaser" />
+          <div>
+            <h3 class="paper-title">FoundObj: Self-supervised Foundation Models as Rewards for Label-free 3D Object Segmentation</h3>
+            <p class="authors" data-i18n="authors.foundobj">Zihui Zhang, Zhixuan Sun, Yafei Yang, Jinxi Li, <strong>Jiahao Chen</strong>, Bo Yang</p>
+            <p class="venue"><em>International Conference on Machine Learning (ICML), 2026</em></p>
+            <p class="links">[Code: TBD]</p>
           </div>
         </article>
 
@@ -75,36 +102,159 @@
           <img class="teaser" src="./physcis_in_one.png" alt="PhysInOne paper teaser" />
           <div>
             <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.09415" target="_blank" rel="noopener noreferrer">PhysInOne: Visual Physics Learning and Reasoning in One Suite</a></h3>
-            <p class="authors">Siyuan Zhou, Hejun Wang, Hu Cheng, Jinxi Li, Dongsheng Wang, Junwei Jiang, Yixiao Jin, Jiayue Huang, Shiwei Mao, Shangjia Liu, Yafei Yang, Hongkang Song, Shenxing Wei, Zihui Zhang, Peng Huang, Shijie Liu, Zhengli Hao, Hao Li, Yitian Li, Wenqi Zhou, Zhihan Zhao, Zongqi He, Hongtao Wen, Shouwang Huang, Peng Yun, Bowen Cheng, Pok Kazaf Fu, Wai Kit Lai, <strong>Jiahao Chen</strong>, Kaiyuan Wang, Zhixuan Sun, Ziqi Li, Haochen Hu, Di Zhang, Chun Ho Yuen, Bing Wang, Zhihua Wang, Chuhang Zou, Bo Yang</p>
-            <p class="venue"><em>CVPR 2026 (Accepted)</em></p>
-            <p class="links"><a href="https://github.com/vLAR-group/PhysInOne" target="_blank" rel="noopener noreferrer">[Code]</a></p>
+            <p class="authors" data-i18n="authors.physinone">Siyuan Zhou, Hejun Wang, Hu Cheng, Jinxi Li, Dongsheng Wang, Junwei Jiang, Yixiao Jin, Jiayue Huang, Shiwei Mao, Shangjia Liu, Yafei Yang, Hongkang Song, Shenxing Wei, Zihui Zhang, Peng Huang, Shijie Liu, Zhengli Hao, Hao Li, Yitian Li, Wenqi Zhou, Zhihan Zhao, Zongqi He, Hongtao Wen, Shouwang Huang, Peng Yun, Bowen Cheng, Pok Kazaf Fu, Wai Kit Lai, <strong>Jiahao Chen</strong>, Kaiyuan Wang, Zhixuan Sun, Ziqi Li, Haochen Hu, Di Zhang, Chun Ho Yuen, Bing Wang, Zhihua Wang, Chuhang Zou, Bo Yang</p>
+            <p class="venue"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</em></p>
+            <p class="links"><a href="https://github.com/vLAR-group/PhysInOne" target="_blank" rel="noopener noreferrer">[Code]</a> <a href="https://vlar-group.github.io/PhysInOne.html" target="_blank" rel="noopener noreferrer">[Website]</a></p>
           </div>
         </article>
 
       </section>
 
-      <section class="glass-card section news-section">
-        <h2 class="section-title">Professional Experience</h2>
+      <section id="experience" class="glass-card section news-section">
+        <h2 class="section-title" data-i18n="section.experience">Professional Experience</h2>
+        <article class="news-item">
+          <p class="tag">Jan 2026 - Present</p>
+          <p data-i18n="experience.polyu">The Hong Kong Polytechnic University, vLAR Group · Research Assistant</p>
+        </article>
         <article class="news-item">
           <p class="tag">Jul 2023 - Oct 2023</p>
-          <p>Fujian Star-net Communication Co., Ltd · Software Engineering R&D</p>
+          <p data-i18n="experience.starnet.fulltime">Fujian Star-net Communication Co., Ltd · Software Engineering R&D</p>
         </article>
         <article class="news-item">
           <p class="tag">Mar 2022 - Jun 2022</p>
-          <p>Fujian Star-net Communication Co., Ltd · Software Engineering R&D Intern</p>
+          <p data-i18n="experience.starnet.intern">Fujian Star-net Communication Co., Ltd · Software Engineering R&D Intern</p>
         </article>
       </section>
 
-      <section class="glass-card section awards-section">
-        <h2 class="section-title">Awards</h2>
-        <article class="news-item"><p class="tag">DAC 61st, 2024</p><p><a href="https://pku-sec-lab.github.io/dac-sdc-2024/results-gpu/" target="_blank" rel="noopener noreferrer">Global 2nd, GPU Track, DAC System Design Contest 2024 (CCF-A)</a> · Team Leader</p></article>
+      <section id="awards" class="glass-card section awards-section">
+        <h2 class="section-title" data-i18n="section.awards">Contest Awards</h2>
+        <article class="news-item"><p class="tag">DAC 61st, 2024</p><p data-i18n="award.dac"><a href="https://pku-sec-lab.github.io/dac-sdc-2024/results-gpu/" target="_blank" rel="noopener noreferrer">Global 2nd, GPU Track, DAC System Design Contest 2024 (CCF-A)</a> · Team Leader</p></article>
       </section>
     </main>
 
     <footer class="footer">
-      Updated: 2026-04 · By Jiahao Chen ·
-      <span id="busuanzi_container_site_uv">Visitors: <strong id="busuanzi_value_site_uv">--</strong></span>
+      <span data-i18n="footer.updated">Updated: 2026-05</span> · <span data-i18n="footer.by">By Jiahao Chen</span> ·
+      <span id="busuanzi_container_site_uv"><span data-i18n="footer.visitors">Visitors:</span> <strong id="busuanzi_value_site_uv">--</strong></span>
     </footer>
+    <script>
+      const translations = {
+        en: {
+          "nav.about": "About",
+          "nav.education": "Education",
+          "nav.publications": "Publications",
+          "nav.experience": "Experience",
+          "nav.awards": "Contest Awards",
+          "hero.name": "Jiahao Chen",
+          "hero.title": 'Research Assistant, <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> · Computer Vision & Robotics',
+          "hero.location": "Hong Kong",
+          "section.about": "About Me",
+          "about.body": 'I am a Research Assistant in the <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> at The Hong Kong Polytechnic University. My supervisor is <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">Prof. Bo Yang</a>. My main research interests are Computer Vision and Robotics, with current work on unsupervised 3D instance segmentation and object-centric representation learning. <span class="phd-note">I am currently seeking PhD opportunities.</span>',
+          "section.education": "Education",
+          "education.polyu.school": "The Hong Kong Polytechnic University",
+          "education.polyu.degree": "MSc in Information Technology · GPA 4.21 / 4.30 · IELTS 7.0",
+          "education.fzu.school": "Fuzhou University",
+          "education.fzu.degree": "Bachelor in Software Engineering · GPA 3.71 / 4.00",
+          "section.publications": "Publications",
+          "authors.evobj": "<strong>Jiahao Chen</strong>, Zihui Zhang, Yafei Yang, Jinxi Li, Shenxing Wei, Zhixuan Sun, Bo Yang",
+          "authors.foundobj": "Zihui Zhang, Zhixuan Sun, Yafei Yang, Jinxi Li, <strong>Jiahao Chen</strong>, Bo Yang",
+          "authors.physinone": "Siyuan Zhou, Hejun Wang, Hu Cheng, Jinxi Li, Dongsheng Wang, Junwei Jiang, Yixiao Jin, Jiayue Huang, Shiwei Mao, Shangjia Liu, Yafei Yang, Hongkang Song, Shenxing Wei, Zihui Zhang, Peng Huang, Shijie Liu, Zhengli Hao, Hao Li, Yitian Li, Wenqi Zhou, Zhihan Zhao, Zongqi He, Hongtao Wen, Shouwang Huang, Peng Yun, Bowen Cheng, Pok Kazaf Fu, Wai Kit Lai, <strong>Jiahao Chen</strong>, Kaiyuan Wang, Zhixuan Sun, Ziqi Li, Haochen Hu, Di Zhang, Chun Ho Yuen, Bing Wang, Zhihua Wang, Chuhang Zou, Bo Yang",
+          "publication.firstAuthor": "First Author",
+          "section.experience": "Professional Experience",
+          "experience.polyu": "The Hong Kong Polytechnic University, vLAR Group · Research Assistant",
+          "experience.starnet.fulltime": "Fujian Star-net Communication Co., Ltd · Software Engineering R&D",
+          "experience.starnet.intern": "Fujian Star-net Communication Co., Ltd · Software Engineering R&D Intern",
+          "section.awards": "Contest Awards",
+          "award.dac": '<a href="https://pku-sec-lab.github.io/dac-sdc-2024/results-gpu/" target="_blank" rel="noopener noreferrer">Global 2nd, GPU Track, DAC System Design Contest 2024 (CCF-A)</a> · Team Leader',
+          "footer.updated": "Updated: 2026-05",
+          "footer.by": "By Jiahao Chen",
+          "footer.visitors": "Visitors:"
+        },
+        zh: {
+          "nav.about": "关于我",
+          "nav.education": "教育经历",
+          "nav.publications": "论文发表",
+          "nav.experience": "科研经历",
+          "nav.awards": "竞赛获奖",
+          "hero.name": "陈佳豪",
+          "hero.title": '研究助理，<a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> · 计算机视觉与机器人',
+          "hero.location": "中国香港",
+          "section.about": "关于我",
+          "about.body": '我目前在香港理工大学 <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> 担任 Research Assistant，导师为 <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">杨波教授</a>。我的主要研究方向是计算机视觉与机器人，目前关注无监督 3D 实例分割和以物体为中心的表征学习。<span class="phd-note">我正在申请博士机会。</span>',
+          "section.education": "教育经历",
+          "education.polyu.school": "香港理工大学",
+          "education.polyu.degree": "资讯科技理学硕士 · GPA 4.21 / 4.30 · IELTS 7.0",
+          "education.fzu.school": "福州大学",
+          "education.fzu.degree": "软件工程学士 · GPA 3.71 / 4.00",
+          "section.publications": "论文发表",
+          "authors.evobj": "<strong>陈佳豪</strong>, Zihui Zhang, Yafei Yang, Jinxi Li, Shenxing Wei, Zhixuan Sun, Bo Yang",
+          "authors.foundobj": "Zihui Zhang, Zhixuan Sun, Yafei Yang, Jinxi Li, <strong>陈佳豪</strong>, Bo Yang",
+          "authors.physinone": "Siyuan Zhou, Hejun Wang, Hu Cheng, Jinxi Li, Dongsheng Wang, Junwei Jiang, Yixiao Jin, Jiayue Huang, Shiwei Mao, Shangjia Liu, Yafei Yang, Hongkang Song, Shenxing Wei, Zihui Zhang, Peng Huang, Shijie Liu, Zhengli Hao, Hao Li, Yitian Li, Wenqi Zhou, Zhihan Zhao, Zongqi He, Hongtao Wen, Shouwang Huang, Peng Yun, Bowen Cheng, Pok Kazaf Fu, Wai Kit Lai, <strong>陈佳豪</strong>, Kaiyuan Wang, Zhixuan Sun, Ziqi Li, Haochen Hu, Di Zhang, Chun Ho Yuen, Bing Wang, Zhihua Wang, Chuhang Zou, Bo Yang",
+          "publication.firstAuthor": "第一作者",
+          "section.experience": "科研与工作经历",
+          "experience.polyu": "香港理工大学 vLAR Group · Research Assistant",
+          "experience.starnet.fulltime": "福建星网锐捷通讯股份有限公司 · 软件工程研发",
+          "experience.starnet.intern": "福建星网锐捷通讯股份有限公司 · 软件工程研发实习生",
+          "section.awards": "竞赛获奖",
+          "award.dac": '<a href="https://pku-sec-lab.github.io/dac-sdc-2024/results-gpu/" target="_blank" rel="noopener noreferrer">DAC System Design Contest 2024 GPU Track 全球第二名（CCF-A）</a> · 队长',
+          "footer.updated": "更新：2026-05",
+          "footer.by": "陈佳豪",
+          "footer.visitors": "访问量："
+        }
+      };
+
+      const languageMenu = document.querySelector(".language-menu");
+      const languageToggle = document.querySelector(".language-toggle");
+      const languageOptions = document.querySelector(".language-options");
+      const languageCurrent = document.querySelector(".language-current");
+      let currentLanguage = "en";
+
+      function setMenuOpen(isOpen) {
+        languageOptions.hidden = !isOpen;
+        languageToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+
+      function setLanguage(language) {
+        currentLanguage = language;
+        document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+        document.title = language === "zh" ? "陈佳豪" : "Jiahao Chen";
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.dataset.i18n;
+          element.innerHTML = translations[language][key];
+        });
+
+        languageCurrent.textContent = language === "zh" ? "中文" : "English";
+        document.querySelectorAll(".language-option").forEach((option) => {
+          const isActive = option.dataset.language === language;
+          option.classList.toggle("is-active", isActive);
+          option.setAttribute("aria-checked", isActive ? "true" : "false");
+        });
+        setMenuOpen(false);
+      }
+
+      languageToggle.addEventListener("click", () => {
+        setMenuOpen(languageOptions.hidden);
+      });
+
+      document.querySelectorAll(".language-option").forEach((option) => {
+        option.addEventListener("click", () => {
+          setLanguage(option.dataset.language);
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!languageMenu.contains(event.target)) {
+          setMenuOpen(false);
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setMenuOpen(false);
+          languageToggle.focus();
+        }
+      });
+    </script>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </body>
 </html>
