@@ -129,6 +129,10 @@ a:focus-visible {
   backdrop-filter: blur(18px);
 }
 
+.language-options[hidden] {
+  display: none;
+}
+
 .language-option {
   min-height: 44px;
   padding: 8px 10px;
