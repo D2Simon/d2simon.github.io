@@ -12,7 +12,7 @@ p { margin: 0; }
 a { color: var(--accent); text-decoration: none; text-underline-offset: 4px; }
 a:hover { text-decoration: underline; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.site-header { max-width: 1280px; margin: 0 auto; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 35px; padding-right: 178px; }
+.site-header { max-width: 1280px; margin: 0 auto; padding: 28px 32px; display: flex; align-items: center; justify-content: flex-end; gap: 35px; padding-right: 178px; }
 .site-brand { color: var(--text); font-family: "Newsreader", Georgia, serif; font-size: 28px; font-weight: 700; white-space: nowrap; }
 .page-nav { display: flex; align-items: center; gap: 12px; }
 .page-nav a { display: flex; align-items: center; min-height: 44px; padding: 8px 13px; border-radius: 8px; color: var(--muted); font-size: 14px; font-weight: 600; white-space: nowrap; transition: background 160ms; }
