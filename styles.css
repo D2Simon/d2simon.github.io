@@ -43,7 +43,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .section { margin-bottom: 38px; scroll-margin-top: 25px; }
 .section-title { margin: 0 0 19px; color: var(--text); font: 700 29px/1.25 "Newsreader", Georgia, serif; }
 .profile-section p { color: var(--muted); font-size: 16px; line-height: 1.9; }
-.phd-note { display: block; margin-top: 17px; color: var(--accent); font-weight: 500; }
+.phd-note { display: block; margin-top: 17px; color: inherit; font-weight: 400; }
 .paper-card { display: grid; grid-template-columns: 165px minmax(0, 1fr); gap: 20px; padding: 20px; background: #f7f9fc; border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 2px 3px #24304406; align-items: start; }
 .paper-card + .paper-card { margin-top: 17px; }
 .teaser { display: block; width: 100%; aspect-ratio: 16/11; object-fit: contain; border-radius: 5px; background: #fff; }
