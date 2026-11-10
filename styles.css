@@ -109,4 +109,3 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-.secondary-name { margin: 0 0 13px; color: var(--muted); font-size: 19px; line-height: 1.5; }
