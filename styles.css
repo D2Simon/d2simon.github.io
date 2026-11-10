@@ -39,7 +39,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .profile-panel h2 { margin: 0 0 10px; color: var(--text); font-size: 15px; font-weight: 650; }
 .profile-panel ul { list-style: none; padding: 0; margin: 0; }
 .profile-panel li + li { margin-top: 5px; }
-.hobby-panel { background: #faf7f1; }
 .main-content { min-width: 0; }
 .section { margin-bottom: 38px; scroll-margin-top: 25px; }
 .section-title { margin: 0 0 19px; color: var(--text); font: 700 29px/1.25 "Newsreader", Georgia, serif; }
