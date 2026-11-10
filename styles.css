@@ -701,3 +701,12 @@ p {
     transform: none;
   }
 }
+
+.school-emblem--monash {
+  display: grid;
+  place-items: center;
+  background: #006dae;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+}
