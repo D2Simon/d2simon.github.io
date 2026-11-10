@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20261111-1" />
+    <link rel="stylesheet" href="./styles.css?v=20261111-3" />
   </head>
   <body>
     <div class="language-menu">
@@ -24,6 +24,8 @@
       </div>
     </div>
 
+    <header class="site-header">
+      <a class="site-brand" href="#about" data-i18n="hero.name">Jiahao Chen</a>
     <nav class="page-nav" aria-label="Section navigation">
       <a href="#about" data-i18n="nav.about">About</a>
       <a href="#education" data-i18n="nav.education">Education</a>
@@ -31,13 +33,14 @@
       <a href="#experience" data-i18n="nav.experience">Experience</a>
       <a href="#awards" data-i18n="nav.awards">Contest Awards</a>
     </nav>
+    </header>
 
     <main class="wrapper">
-      <section class="glass-card intro-section">
+      <aside class="intro-section" aria-label="Profile">
         <img class="avatar-photo" src="./RA_Photo.jpg" alt="Jiahao Chen Photo" />
         <div class="intro-container">
           <h1 class="name" data-i18n="hero.name">Jiahao Chen</h1>
-          <p class="title" data-i18n="hero.title">Research Assistant, <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> · Computer Vision & Robotics</p>
+          <p class="title" data-i18n="hero.title">Research Assistant, <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a></p>
           <ul class="contact-list">
             <li><a class="contact-link" href="mailto:polyjiahao.chen@connect.polyu.hk"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6.5h16v11H4z" /><path d="m4.75 7.25 7.25 5.5 7.25-5.5" /></svg><span>Email</span></a></li>
             <li><a class="contact-link" href="https://scholar.google.com/citations?hl=zh-CN&view_op=list_works&gmla=AIqSsVuMLD1o6odnJSZbPym4iI6u67L-TQrIR3b3BhZAQxq7ot5-mf5o6U8k6l1wszzfFePLzvhxivMa9TKKYH0ZBeQtaQD4ee1rTig53cvxfkeuNGwMfMxhQuKz5koB2jI&user=ydlQnLgAAAAJ" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4 4.5 8.2 12 12.4l7.5-4.2L12 4Z" /><path d="M7 10.2v4.1c0 1.8 2.2 3.2 5 3.2s5-1.4 5-3.2v-4.1" /></svg><span>Google Scholar</span></a></li>
@@ -46,16 +49,61 @@
             <li data-i18n="hero.location">Hong Kong</li>
           </ul>
         </div>
-      </section>
+        <div class="profile-panel">
+          <h2 data-i18n="profile.research">Research Interests</h2>
+          <ul><li data-i18n="research.cv">Computer Vision</li><li data-i18n="research.generative">Generative Models</li><li>Physical Learning</li></ul>
+        </div>
+        <div class="profile-panel hobby-panel">
+          <h2 data-i18n="profile.hobbies">Outside Research</h2>
+          <p data-i18n="profile.automotive">Automotive culture</p>
+        </div>
+      </aside>
 
+      <div class="main-content">
       <section id="about" class="glass-card section profile-section">
         <h2 class="section-title" data-i18n="section.about">About Me</h2>
         <p data-i18n="about.body">
           I am a Research Assistant in the <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> at The Hong Kong Polytechnic University.
-          My supervisor is <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">Prof. Bo Yang</a>. My main research interests are Computer Vision and Robotics,
+          My supervisor is <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">Prof. Bo Yang</a>. My research interests include Computer Vision, Generative Models, and Physical Learning,
           with current work on 4D reconstruction and world models.
           <span class="phd-note">I will join Monash University in 2027 as a PhD student in Information Technology with an MGS scholarship.</span>
         </p>
+      </section>
+
+      <section id="publications" class="glass-card section publications-section">
+        <h2 class="section-title" data-i18n="section.publications">Publications</h2>
+
+        <article class="paper-card">
+          <img class="teaser" src="./EvObj_video.gif" alt="EvObj visual teaser" />
+          <div>
+            <h3 class="paper-title"><a href="https://arxiv.org/html/2605.13152v1" target="_blank" rel="noopener noreferrer">EvObj: Learning Evolving Object-centric Representations for 3D Instance Segmentation without Scene Supervision</a></h3>
+            <p class="authors" data-i18n="authors.evobj"><strong>Jiahao Chen</strong>, Zihui Zhang, Yafei Yang, Jinxi Li, Shenxing Wei, Zhixuan Sun, Bo Yang</p>
+            <p class="venue"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</em></p>
+            <p class="venue" data-i18n="publication.firstAuthor">First Author</p>
+            <p class="links"><a href="https://arxiv.org/html/2605.13152v1" target="_blank" rel="noopener noreferrer">[arXiv]</a> <a href="https://github.com/vLAR-group/EvObj" target="_blank" rel="noopener noreferrer">[Code]</a> <a href="https://www.youtube.com/watch?v=zpWWP86lzCU" target="_blank" rel="noopener noreferrer">[YouTube]</a></p>
+          </div>
+        </article>
+
+        <article class="paper-card">
+          <img class="teaser" src="./foundobj.jpg" alt="FoundObj paper teaser" />
+          <div>
+            <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.27178" target="_blank" rel="noopener noreferrer">FoundObj: Self-supervised Foundation Models as Rewards for Label-free 3D Object Segmentation</a></h3>
+            <p class="authors" data-i18n="authors.foundobj">Zihui Zhang, Zhixuan Sun, Yafei Yang, Jinxi Li, <strong>Jiahao Chen</strong>, Bo Yang</p>
+            <p class="venue"><em>International Conference on Machine Learning (ICML), 2026</em></p>
+            <p class="links"><a href="https://arxiv.org/abs/2605.27178" target="_blank" rel="noopener noreferrer">[arXiv]</a> <a href="https://github.com/vLAR-group/FoundObj" target="_blank" rel="noopener noreferrer">[Code]</a></p>
+          </div>
+        </article>
+
+        <article class="paper-card">
+          <img class="teaser" src="./physcis_in_one.png" alt="PhysInOne paper teaser" />
+          <div>
+            <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.09415" target="_blank" rel="noopener noreferrer">PhysInOne: Visual Physics Learning and Reasoning in One Suite</a></h3>
+            <p class="authors" data-i18n="authors.physinone">Siyuan Zhou, Hejun Wang, Hu Cheng, Jinxi Li, Dongsheng Wang, Junwei Jiang, Yixiao Jin, Jiayue Huang, Shiwei Mao, Shangjia Liu, Yafei Yang, Hongkang Song, Shenxing Wei, Zihui Zhang, Peng Huang, Shijie Liu, Zhengli Hao, Hao Li, Yitian Li, Wenqi Zhou, Zhihan Zhao, Zongqi He, Hongtao Wen, Shouwang Huang, Peng Yun, Bowen Cheng, Pok Kazaf Fu, Wai Kit Lai, <strong>Jiahao Chen</strong>, Kaiyuan Wang, Zhixuan Sun, Ziqi Li, Haochen Hu, Di Zhang, Chun Ho Yuen, Bing Wang, Zhihua Wang, Chuhang Zou, Bo Yang</p>
+            <p class="venue"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</em></p>
+            <p class="links"><a href="https://arxiv.org/abs/2604.09415" target="_blank" rel="noopener noreferrer">[arXiv]</a> <a href="https://github.com/vLAR-group/PhysInOne" target="_blank" rel="noopener noreferrer">[Code]</a> <a href="https://vlar-group.github.io/PhysInOne.html" target="_blank" rel="noopener noreferrer">[Website]</a></p>
+          </div>
+        </article>
+
       </section>
 
       <section id="education" class="glass-card section educations-section">
@@ -102,42 +150,6 @@
         </article>
       </section>
 
-      <section id="publications" class="glass-card section publications-section">
-        <h2 class="section-title" data-i18n="section.publications">Publications</h2>
-
-        <article class="paper-card">
-          <img class="teaser" src="./EvObj_video.gif" alt="EvObj visual teaser" />
-          <div>
-            <h3 class="paper-title"><a href="https://arxiv.org/html/2605.13152v1" target="_blank" rel="noopener noreferrer">EvObj: Learning Evolving Object-centric Representations for 3D Instance Segmentation without Scene Supervision</a></h3>
-            <p class="authors" data-i18n="authors.evobj"><strong>Jiahao Chen</strong>, Zihui Zhang, Yafei Yang, Jinxi Li, Shenxing Wei, Zhixuan Sun, Bo Yang</p>
-            <p class="venue"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</em></p>
-            <p class="venue" data-i18n="publication.firstAuthor">First Author</p>
-            <p class="links"><a href="https://arxiv.org/html/2605.13152v1" target="_blank" rel="noopener noreferrer">[arXiv]</a> <a href="https://github.com/vLAR-group/EvObj" target="_blank" rel="noopener noreferrer">[Code]</a> <a href="https://www.youtube.com/watch?v=zpWWP86lzCU" target="_blank" rel="noopener noreferrer">[YouTube]</a></p>
-          </div>
-        </article>
-
-        <article class="paper-card">
-          <img class="teaser" src="./foundobj.jpg" alt="FoundObj paper teaser" />
-          <div>
-            <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.27178" target="_blank" rel="noopener noreferrer">FoundObj: Self-supervised Foundation Models as Rewards for Label-free 3D Object Segmentation</a></h3>
-            <p class="authors" data-i18n="authors.foundobj">Zihui Zhang, Zhixuan Sun, Yafei Yang, Jinxi Li, <strong>Jiahao Chen</strong>, Bo Yang</p>
-            <p class="venue"><em>International Conference on Machine Learning (ICML), 2026</em></p>
-            <p class="links"><a href="https://arxiv.org/abs/2605.27178" target="_blank" rel="noopener noreferrer">[arXiv]</a> <a href="https://github.com/vLAR-group/FoundObj" target="_blank" rel="noopener noreferrer">[Code]</a></p>
-          </div>
-        </article>
-
-        <article class="paper-card">
-          <img class="teaser" src="./physcis_in_one.png" alt="PhysInOne paper teaser" />
-          <div>
-            <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.09415" target="_blank" rel="noopener noreferrer">PhysInOne: Visual Physics Learning and Reasoning in One Suite</a></h3>
-            <p class="authors" data-i18n="authors.physinone">Siyuan Zhou, Hejun Wang, Hu Cheng, Jinxi Li, Dongsheng Wang, Junwei Jiang, Yixiao Jin, Jiayue Huang, Shiwei Mao, Shangjia Liu, Yafei Yang, Hongkang Song, Shenxing Wei, Zihui Zhang, Peng Huang, Shijie Liu, Zhengli Hao, Hao Li, Yitian Li, Wenqi Zhou, Zhihan Zhao, Zongqi He, Hongtao Wen, Shouwang Huang, Peng Yun, Bowen Cheng, Pok Kazaf Fu, Wai Kit Lai, <strong>Jiahao Chen</strong>, Kaiyuan Wang, Zhixuan Sun, Ziqi Li, Haochen Hu, Di Zhang, Chun Ho Yuen, Bing Wang, Zhihua Wang, Chuhang Zou, Bo Yang</p>
-            <p class="venue"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026</em></p>
-            <p class="links"><a href="https://arxiv.org/abs/2604.09415" target="_blank" rel="noopener noreferrer">[arXiv]</a> <a href="https://github.com/vLAR-group/PhysInOne" target="_blank" rel="noopener noreferrer">[Code]</a> <a href="https://vlar-group.github.io/PhysInOne.html" target="_blank" rel="noopener noreferrer">[Website]</a></p>
-          </div>
-        </article>
-
-      </section>
-
       <section id="experience" class="glass-card section news-section">
         <h2 class="section-title" data-i18n="section.experience">Professional Experience</h2>
         <article class="news-item">
@@ -158,26 +170,32 @@
         <h2 class="section-title" data-i18n="section.awards">Contest Awards</h2>
         <article class="news-item"><p class="tag">DAC 61st, 2024</p><p data-i18n="award.dac"><a href="https://pku-sec-lab.github.io/dac-sdc-2024/results-gpu/" target="_blank" rel="noopener noreferrer">Global 2nd, GPU Track, DAC System Design Contest 2024 (CCF-A)</a> · Team Leader</p></article>
       </section>
+      </div>
     </main>
 
     <footer class="footer">
-      <span data-i18n="footer.updated">Updated: 2026-06</span> · <span data-i18n="footer.by">By Jiahao Chen</span> ·
+      <span data-i18n="footer.updated">Updated: 2026-11</span> · <span data-i18n="footer.by">By Jiahao Chen</span> ·
       <span id="busuanzi_container_site_uv"><span data-i18n="footer.visitors">Visitors:</span> <strong id="busuanzi_value_site_uv">--</strong></span>
     </footer>
     <script>
       const translations = {
         en: {
+          "profile.research": "Research Interests",
+          "research.cv": "Computer Vision",
+          "research.generative": "Generative Models",
+          "profile.hobbies": "Outside Research",
+          "profile.automotive": "Automotive culture",
           "nav.about": "About",
           "nav.education": "Education",
           "nav.publications": "Publications",
           "nav.experience": "Experience",
           "nav.awards": "Contest Awards",
           "hero.name": "Jiahao Chen",
-          "hero.title": 'Research Assistant, <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> · Computer Vision & Robotics',
+          "hero.title": 'Research Assistant, <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a>',
           "hero.xiaohongshu": "Xiaohongshu",
           "hero.location": "Hong Kong",
           "section.about": "About Me",
-          "about.body": 'I am a Research Assistant in the <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> at The Hong Kong Polytechnic University. My supervisor is <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">Prof. Bo Yang</a>. My main research interests are Computer Vision and Robotics, with current work on 4D reconstruction and world models. <span class="phd-note">I will join Monash University in 2027 as a PhD student in Information Technology with an MGS scholarship.</span>',
+          "about.body": 'I am a Research Assistant in the <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> at The Hong Kong Polytechnic University. My supervisor is <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">Prof. Bo Yang</a>. My research interests include Computer Vision, Generative Models, and Physical Learning, with current work on 4D reconstruction and world models. <span class="phd-note">I will join Monash University in 2027 as a PhD student in Information Technology with an MGS scholarship.</span>',
           "section.education": "Education",
           "education.monash.school": "Monash University",
           "education.monash.date": "2027 · Incoming",
@@ -199,22 +217,27 @@
           "experience.starnet.intern": "Fujian Star-net Communication Co., Ltd · Software Engineering R&D Intern",
           "section.awards": "Contest Awards",
           "award.dac": '<a href="https://pku-sec-lab.github.io/dac-sdc-2024/results-gpu/" target="_blank" rel="noopener noreferrer">Global 2nd, GPU Track, DAC System Design Contest 2024 (CCF-A)</a> · Team Leader',
-          "footer.updated": "Updated: 2026-06",
+          "footer.updated": "Updated: 2026-11",
           "footer.by": "By Jiahao Chen",
           "footer.visitors": "Visitors:"
         },
         zh: {
+          "profile.research": "研究兴趣",
+          "research.cv": "计算机视觉",
+          "research.generative": "生成式模型",
+          "profile.hobbies": "业余爱好",
+          "profile.automotive": "汽车文化",
           "nav.about": "关于我",
           "nav.education": "教育经历",
           "nav.publications": "论文发表",
           "nav.experience": "科研经历",
           "nav.awards": "竞赛获奖",
           "hero.name": "陈佳豪",
-          "hero.title": '研究助理，<a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> · 计算机视觉与机器人',
+          "hero.title": '研究助理，<a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a>',
           "hero.xiaohongshu": "小红书",
           "hero.location": "中国香港",
           "section.about": "关于我",
-          "about.body": '我目前在香港理工大学 <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> 担任 Research Assistant，导师为 <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">杨波教授</a>。我的主要研究方向是计算机视觉与机器人，目前关注 4D 重建与 World Models。<span class="phd-note">我将于 2027 年入读蒙纳士大学（Monash University）Information Technology 博士项目，并获 MGS 奖学金。</span>',
+          "about.body": '我目前在香港理工大学 <a href="https://vlar-group.github.io/" target="_blank" rel="noopener noreferrer">vLAR Group</a> 担任 Research Assistant，导师为 <a href="https://yang7879.github.io/" target="_blank" rel="noopener noreferrer">杨波教授</a>。我的研究兴趣包括计算机视觉、生成式模型与 Physical Learning，目前关注 4D 重建与 World Models。<span class="phd-note">我将于 2027 年入读蒙纳士大学（Monash University）Information Technology 博士项目，并获 MGS 奖学金。</span>',
           "section.education": "教育经历",
           "education.monash.school": "蒙纳士大学（Monash University）",
           "education.monash.date": "2027 年 · 即将入学",
