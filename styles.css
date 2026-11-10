@@ -54,7 +54,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .authors strong { color: var(--accent); font-weight: 650; }
 .venue { color: var(--muted); font-size: 12px; margin-top: 6px; }
 .links { display: flex; flex-wrap: wrap; gap: 11px; font-size: 12px; margin-top: 8px; font-weight: 600; }
-.education-item { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 18px; align-items: center; padding: 14px 0; }
+.education-item { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 18px; align-items: center; padding: 14px 0; }
 .education-item + .education-item { border-top: 1px solid #edf0f4; }
 .education-details { min-width: 0; }
 .upper-row { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; }
@@ -66,7 +66,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .school-emblem--fzu { border-radius: 50%; }
 .school-emblem--fzu img { width: 186px; height: auto; left: -69px; top: -5px; }
 .school-emblem--maynooth img { height: 48px; left: 2px; top: 0; }
-.school-emblem--monash { display: grid; place-items: center; color: #fff; background: #006dae; border-radius: 5px; font-weight: 700; }
+.school-emblem--monash { width: 72px; overflow: visible; }
+.school-emblem--monash img { width: 72px; height: auto; top: 13px; left: 0; }
 .news-item { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; font-size: 13px; color: var(--muted); }
 .news-item + .news-item { margin-top: 16px; }
 .tag { color: var(--accent); font-size: 12px; }
